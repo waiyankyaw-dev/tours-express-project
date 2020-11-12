@@ -19,6 +19,9 @@ const viewRouter = require('./routes/viewRoutes');
 
 const app = express();
 
+//for https
+app.enable('trust proxy');
+
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views')); //we don't need to worry about path(/views),node will automatically create with this package
 
